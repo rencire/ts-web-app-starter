@@ -1,3 +1,5 @@
+const DashboardPlugin = require("webpack-dashboard/plugin");
+
 module.exports = (env, argv) => ({
   // entry: './src/index',
   ...(argv.mode === "development" && { devtool: "inline-source-map" }),
@@ -17,5 +19,6 @@ module.exports = (env, argv) => ({
   devServer: {
     contentBase: "./dist/"
     // port: 8080
-  }
+  },
+  plugins: [new DashboardPlugin()]
 });

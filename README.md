@@ -5,3 +5,4 @@
 * https://github.com/TypeStrong/ts-loader
 * https://github.com/typicode/husky
 * https://github.com/palantir/tslint
+* https://github.com/FormidableLabs/webpack-dashboard
