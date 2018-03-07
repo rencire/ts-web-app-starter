@@ -1,24 +1,37 @@
-const DashboardPlugin = require("webpack-dashboard/plugin");
+module.exports = (env, argv) => {
+  const config = {
+    // entry: './src/index',
+    module: {
+      rules: [
+        {
+          test: /\.tsx?$/,
+          use: "ts-loader",
+          include: /src/
+        }
+      ]
+    },
+    resolve: {
+      extensions: [".ts", ".tsx", ".js"]
+    }
+    // output: './dist/main.js',
+  };
 
-module.exports = (env, argv) => ({
-  // entry: './src/index',
-  ...(argv.mode === "development" && { devtool: "inline-source-map" }),
-  module: {
-    rules: [
-      {
-        test: /\.ts$/,
-        use: "ts-loader",
-        include: /src/
-      }
-    ]
-  },
-  resolve: {
-    extensions: [".ts", ".js"]
-  },
-  // output: './dist/main.js',
-  devServer: {
-    contentBase: "./dist/"
-    // port: 8080
-  },
-  plugins: [new DashboardPlugin()]
-});
+  if (argv.mode === "development") {
+    const DashboardPlugin = require("webpack-dashboard/plugin");
+    const webpack = require("webpack");
+
+    config.devtool = "inline-source-map";
+    config.devServer = {
+      contentBase: "./dist/",
+      hot: true
+      // port: 8080
+    };
+    config.plugins = [
+      new DashboardPlugin(),
+      new webpack.NamedModulesPlugin(),
+      new webpack.HotModuleReplacementPlugin()
+    ];
+  }
+
+  return config;
+};

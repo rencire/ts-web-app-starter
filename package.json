@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/rencire/weeact#readme",
   "devDependencies": {
+    "@types/webpack-env": "^1.13.5",
     "husky": "^0.15.0-rc.8",
     "pretty-quick": "^1.4.1",
     "ts-loader": "^4.0.0-beta.0",

@@ -2,6 +2,6 @@
   "compilerOptions": {
     "strict": true,
     "sourceMap": true,
-    "target": "es2016"
+    "target": "es6"
   }
 }

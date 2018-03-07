@@ -1,3 +1,7 @@
+## Notes
+
+* HMR not working
+
 ## Tools
 
 * https://github.com/Microsoft/TypeScript
