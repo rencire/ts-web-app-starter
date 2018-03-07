@@ -1,8 +1,8 @@
 {
-   "hooks": {
+  "hooks": {
     "pre-commit": "pretty-quick --staged",
-    "prepare-commit-msg": "./gitHooks/prepare-commit-msg ${GIT_PARAMS}",
-    "commit-msg": "./gitHooks/commit-msg ${GIT_PARAMS}",
-    "prepush": "eslint 'src/**/*.js'"
-   }
+    //"prepare-commit-msg": "./gitHooks/prepare-commit-msg ${GIT_PARAMS}",
+    // "commit-msg": "./gitHooks/commit-msg ${GIT_PARAMS}",
+    "prepush": "tslint -c tslint.json 'src/**/*.ts'"
+  }
 }
