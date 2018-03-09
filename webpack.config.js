@@ -5,8 +5,22 @@ module.exports = (env, argv) => {
       rules: [
         {
           test: /\.tsx?$/,
-          use: "ts-loader",
-          include: /src/
+          include: /src/,
+          use: "ts-loader"
+        },
+        {
+          test: /\.css$/,
+          include: /src/,
+          use: [
+            "style-loader",
+            {
+              loader: "css-loader",
+              options: {
+                importLoaders: 1
+              }
+            },
+            "post-loader"
+          ]
         }
       ]
     },
@@ -20,7 +34,7 @@ module.exports = (env, argv) => {
     const DashboardPlugin = require("webpack-dashboard/plugin");
     const webpack = require("webpack");
 
-    config.devtool = "inline-source-map";
+    config.devtool = "cheap-module-eval-source-map";
     config.devServer = {
       contentBase: "./dist/",
       hot: true
