@@ -10,6 +10,16 @@
     "test.wa": "jest -c .jestrc.json --watchAll",
     "start.prd": "http-server ./dist -g"
   },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
   "devDependencies": {
     "@types/jest": "^22.2.0",
     "@types/webpack-env": "^1.13.5",
@@ -20,7 +30,6 @@
     "lint-staged": "^7.0.0",
     "postcss-loader": "^2.1.1",
     "postcss-preset-env": "^3.2.2",
-    "pretty-quick": "^1.4.1",
     "style-loader": "^0.20.2",
     "ts-jest": "^22.4.1",
     "ts-loader": "^4.0.0-beta.0",
