@@ -36,8 +36,9 @@
     "ts-jest": "^22.4.1",
     "ts-loader": "^4.0.0-beta.0",
     "tslint": "^5.9.1",
+    "tslint-loader": "^3.6.0",
     "typescript": "^2.7.2",
-    "webpack": "^4.0.0-beta.2",
+    "webpack": "^4.1.1",
     "webpack-cli": "^2.0.6",
     "webpack-dashboard": "^1.1.1",
     "webpack-dev-server": "^3.0.0-beta.2"

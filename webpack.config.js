@@ -6,7 +6,10 @@ module.exports = (env, argv) => {
         {
           test: /\.tsx?$/,
           include: /src/,
-          use: "ts-loader"
+          use: [
+            "ts-loader",
+            "tslint-loader"
+          ]
         },
         {
           test: /\.css$/,
