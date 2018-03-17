@@ -1,6 +1,6 @@
-# Typescript Starter Web Project
+# Typescript Starter Frontend Web Project
 
-A starter web project with focus on developer happiness.
+A starter frontend web project with focus on developer happiness.
 
 ## Notes
 
