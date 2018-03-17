@@ -1,8 +1,8 @@
 {
   "hooks": {
-    "pre-commit": "pretty-quick --staged",
+    "pre-commit": "lint-staged",
     //"prepare-commit-msg": "./gitHooks/prepare-commit-msg ${GIT_PARAMS}",
     // "commit-msg": "./gitHooks/commit-msg ${GIT_PARAMS}",
-    "prepush": "tslint -c tslint.json 'src/**/*.ts'"
+    "prepush": "jest --config .jestrc.json --bail --findRelatedTests"
   }
 }
