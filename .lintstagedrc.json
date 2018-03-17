@@ -3,7 +3,7 @@
     "prettier --write",
     "tslint -c tslint.json 'src/**/*.ts' --fix",
     "git add",
-    "jest --config .jestrc.json --bail --findRelatedTests"
+    "jest -c .jestrc.json --bail --findRelatedTests"
   ],
   "*.{json,css,md}": ["prettier --write", "git add"]
 }

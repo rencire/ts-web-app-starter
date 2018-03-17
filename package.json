@@ -5,19 +5,11 @@
   "scripts": {
     "start": "webpack-dashboard -- webpack-dev-server --mode 'development'",
     "build": "webpack --mode 'production'",
-    "test": "jest --config .jestrc.json",
+    "test": "jest -c .jestrc.json",
+    "test.w": "jest -c .jestrc.json --watch",
+    "test.wa": "jest -c .jestrc.json --watchAll",
     "start.prd": "http-server ./dist -g"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rencire/ts-web-app-starter.git"
-  },
-  "author": "@rencire",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rencire/ts-web-app-starter/issues"
-  },
-  "homepage": "https://github.com/rencire/weeact#readme",
   "devDependencies": {
     "@types/jest": "^22.2.0",
     "@types/webpack-env": "^1.13.5",
