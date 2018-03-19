@@ -1,6 +1,6 @@
 // Config specific to production mode
 const commonConfig = require("./webpack.config.common.js");
-const fallbackProdConfig = require("./webpack.config.fallback.js");
+const fallbackProdConfig = require("./webpack.config.production.fallback.js");
 const mainProdConfig = commonConfig;
 
 module.exports = [

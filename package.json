@@ -5,12 +5,14 @@
   "scripts": {
     "start":
       "webpack-dashboard -- webpack-dev-server --mode 'development' --config webpack.config.development.js",
+    "start.dev": "npm run start",
     "build":
       "webpack --mode 'production' --config webpack.config.production.js",
     "test": "jest -c .jestrc.json",
     "test.w": "jest -c .jestrc.json --watch",
     "test.wa": "jest -c .jestrc.json --watchAll",
-    "start.prd": "http-server ./dist -g"
+    "build.start": "npm run build && npm run start.prod",
+    "start.prod": "http-server ./dist -g"
   },
   "repository": {
     "type": "git",
