@@ -1,5 +1,5 @@
 const commonConfig = require("./webpack.config.common.js");
-const babelConfig = require("./babel.config.js");
+const babelConfig = require("./.babelrc.js");
 
 const fallbackBabelConfig = {
   ...babelConfig,
@@ -18,8 +18,8 @@ const fallbackBabelConfig = {
   ]
 };
 
-const moduleOpts = commonConfig.module;
-const rules = moduleOpts.rules;
+const moduleObj = commonConfig.module;
+const rules = moduleObj.rules;
 const tsRuleObj = rules[0];
 const tsRuleLoaders = tsRuleObj.use;
 
