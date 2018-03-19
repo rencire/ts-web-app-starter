@@ -12,6 +12,7 @@ module.exports = {
     // port: 8080
   },
   plugins: [
+    ...commonConfig.plugins,
     new DashboardPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin()

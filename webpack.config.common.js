@@ -32,8 +32,8 @@ module.exports = {
     extensions: [".ts", ".tsx", ".js"]
   },
   plugins: [
-    new webpack.LoaderOptionsPlugin({
-      debug: true
-    })
+    //   new webpack.LoaderOptionsPlugin({
+    //     debug: true
+    //   })
   ]
 };
