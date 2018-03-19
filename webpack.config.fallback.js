@@ -4,7 +4,6 @@ const babelConfig = require("./babel.config.js");
 const fallbackBabelConfig = {
   ...babelConfig,
   presets: [
-    ...babelConfig.presets.slice(0, 0),
     [
       ...babelConfig.presets[0].slice(0, 1),
       {
@@ -27,11 +26,9 @@ module.exports = {
   module: {
     ...commonConfig.module,
     rules: [
-      ...commonConfig.module.rules.slice(0, 0),
       {
         ...commonConfig.module.rules[0],
         use: [
-          ...commonConfig.module.rules[0].use.slice(0, 0),
           { loader: "babel-loader", options: fallbackBabelConfig },
           ...commonConfig.module.rules[0].use.slice(1)
         ]
