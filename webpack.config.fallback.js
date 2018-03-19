@@ -18,22 +18,27 @@ const fallbackBabelConfig = {
   ]
 };
 
+const moduleOpts = commonConfig.module;
+const rules = moduleOpts.rules;
+const tsRuleObj = rules[0];
+const tsRuleLoaders = tsRuleObj.use;
+
 module.exports = {
   ...commonConfig,
   output: {
     filename: "./fallback.js"
   },
   module: {
-    ...commonConfig.module,
+    ...moduleObj,
     rules: [
       {
-        ...commonConfig.module.rules[0],
+        ...tsRuleObj,
         use: [
           { loader: "babel-loader", options: fallbackBabelConfig },
-          ...commonConfig.module.rules[0].use.slice(1)
+          ...tsRuleLoaders.slice(1)
         ]
       },
-      ...commonConfig.module.rules.slice(1) // 1 is index of rule we want to override
+      ...rules.slice(1) // 1 is index of rule we want to override
     ]
   }
 };
