@@ -4,6 +4,11 @@ A starter frontend web project with an opionated default configuration.
 
 # Quick Start
 
+## Dependencies
+
+* git
+* node.js >= 8
+
 Clone:
 
 ```
