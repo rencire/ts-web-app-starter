@@ -45,6 +45,7 @@ Now just add your own javascript framework/lib flavor of the month, and you're a
 * [x] Create [legacy webpack prod config](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/)
 * [ ] Add `stylelint-webpack-plugin` once stable for webpack 4:
       `https://github.com/JaKXz/stylelint-webpack-plugin/issues/137`
+* [ ] Move links/docs to config code itself
 
 ## Notes
 
