@@ -1,18 +1,20 @@
 const commonConfig = require("./webpack.config.common.js");
 const babelConfig = require("./.babelrc.js");
 
+const presetEnv = babelConfig.presets[0];
+const presetEnvOptions = presetEnv[1];
+
 const fallbackBabelConfig = {
   ...babelConfig,
   presets: [
     [
-      ...babelConfig.presets[0].slice(0, 1),
+      "@babel/preset-env",
       {
-        ...babelConfig.presets[0][1],
+        ...presetEnvOptions,
         targets: {
           browsers: ["> 1%", "last 2 versions", "Firefox ESR"]
         }
-      },
-      ...babelConfig.presets[0].slice(2)
+      }
     ],
     ...babelConfig.presets.slice(1)
   ]
