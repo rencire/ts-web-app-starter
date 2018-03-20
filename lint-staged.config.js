@@ -1,4 +1,4 @@
-{
+module.exports = {
   "*.{ts,tsx}": [
     "prettier --write",
     "tslint -c tslint.json 'src/**/*.ts' --fix",
@@ -7,4 +7,4 @@
   ],
   "*.{json,md}": ["prettier --write", "git add"],
   "*.css": ["prettier --write", "stylelint", "git add"]
-}
+};
