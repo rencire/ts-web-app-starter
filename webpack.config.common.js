@@ -18,7 +18,8 @@ module.exports = {
           {
             loader: "css-loader",
             options: {
-              importLoaders: 1
+              importLoaders: 1,
+              modules: true
             }
           },
           "postcss-loader"
@@ -32,6 +33,7 @@ module.exports = {
     extensions: [".ts", ".tsx", ".js"]
   },
   plugins: [
+    //   For debugging
     //   new webpack.LoaderOptionsPlugin({
     //     debug: true
     //   })

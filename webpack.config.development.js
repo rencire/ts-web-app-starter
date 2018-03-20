@@ -1,7 +1,9 @@
 // Config specific to development mode
-const DashboardPlugin = require("webpack-dashboard/plugin");
 const webpack = require("webpack");
 const commonConfig = require("./webpack.config.common.js");
+
+const DashboardPlugin = require("webpack-dashboard/plugin");
+const HardSourceWebpackPlugin = require("hard-source-webpack-plugin");
 
 module.exports = {
   ...commonConfig,
@@ -13,8 +15,9 @@ module.exports = {
   },
   plugins: [
     ...commonConfig.plugins,
-    new DashboardPlugin(),
     new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new DashboardPlugin(),
+    new HardSourceWebpackPlugin()
   ]
 };
