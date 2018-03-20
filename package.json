@@ -8,9 +8,9 @@
     "start.dev": "npm run start",
     "build":
       "webpack --mode 'production' --config webpack.config.production.js",
-    "test": "jest -c .jestrc.json",
-    "test.w": "jest -c .jestrc.json --watch",
-    "test.wa": "jest -c .jestrc.json --watchAll",
+    "test": "jest",
+    "test.w": "jest --watch",
+    "test.wa": "jest --watchAll",
     "build.start": "npm run build && npm run start.prod",
     "start.prod": "http-server ./dist -g"
   },
