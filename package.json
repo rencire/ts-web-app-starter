@@ -3,12 +3,10 @@
   "version": "0.0.1",
   "description": "A bare bones typescript web app starter",
   "scripts": {
-    "build":
-      "webpack --mode 'production' --config webpack.config.production.js",
+    "build": "webpack --mode 'production'",
     "build.start": "npm run build && npm run start.prod",
     "rm.cache.hs": "rimraf ./node_modules/.cache/hard-source",
-    "start":
-      "webpack-dashboard -- webpack-dev-server --mode 'development' --config webpack.config.development.js",
+    "start": "webpack-dashboard -- webpack-dev-server --mode 'development'",
     "start.dev": "npm run start",
     "start.prod": "http-server ./dist -g",
     "test": "jest",
